@@ -23,11 +23,22 @@ const giftPosition = {
 
 let enemyPositions = [];
 
+// Juego Ganado
+const gameWin = ()=>{
+
+};
+
 // Siguiente Nivel 
 const levelWin = ()=>{
     level ++
     startGame();
-} 
+};
+
+// Posicion Actual
+const levelFail = () =>{
+    playerPosition.x = undefined;
+    playerPosition.y = undefined;
+}
 
 // Movimineto Jugador
 const movePlayer = ()=>{
@@ -45,7 +56,7 @@ const movePlayer = ()=>{
         return enemyCollitionX && enemyCollitionY;
     });
     if(enemyCollition){
-        console.log('enemigos');
+        levelFail();
     }
 
     game.fillText(emojis['PLAYER'], playerPosition.x-25,playerPosition.y);
@@ -61,7 +72,7 @@ const startGame = () =>{
     const map = maps[level];
 
     if(!map){
-        alert('has completado el juego');
+        gameWin();
         return;
     }
 
