@@ -111,7 +111,7 @@ const moveUp = ()=>{
 };
 
 const moveLeft = ()=>{
-    if((playerPosition.x - elementsSize) < elementsSize){
+    if(((playerPosition.x - elementsSize)+25) < elementsSize){
         return;
     }else{
         playerPosition.x -= elementsSize;
@@ -121,7 +121,7 @@ const moveLeft = ()=>{
 };
 
 const moveRight = ()=>{
-    if((playerPosition.x + elementsSize) > canvasSize){
+    if(((playerPosition.x + elementsSize)+25) > canvasSize){
         return;
     }else{
         playerPosition.x += elementsSize;
