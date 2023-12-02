@@ -9,7 +9,7 @@ let elementsSize;
 const startGame = () =>{
     
     game.font = elementsSize + 'px Verdana';
-    // game.textAling = 'end';
+    game.textAling = 'end';
 
     for (let row = 0; row <=11; row++) {
         for (let cols = 1; cols <= 10; cols++ ){
