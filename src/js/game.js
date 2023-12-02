@@ -16,6 +16,11 @@ const playerPosition = {
     y: undefined
 };
 
+// Movimineto Jugador
+const movePlayer = ()=>{
+    game.fillText(emojis['PLAYER'], playerPosition.x-25,playerPosition.y);
+};
+
 // Funcion principal;
 const startGame = () =>{
     
@@ -45,7 +50,7 @@ const startGame = () =>{
         });
     });
 
-    game.fillText(emojis['PLAYER'], playerPosition.x-25,playerPosition.y);
+    movePlayer();
 };
 
 // Responsive canvas;
@@ -56,26 +61,33 @@ const setcanvasSizes = ()=>{
     canvas.setAttribute('height', canvasSize);
 
     elementsSize = (canvasSize / 10) ;
-    console.log(elementsSize);
     startGame();
 };
 
 
 
 const moveUp = ()=>{
-    
+    playerPosition.y -= elementsSize;
+    movePlayer();
+    return;
 };
 
 const moveLeft = ()=>{
-    
+    playerPosition.x += elementsSize;
+    movePlayer();
+    return;
 };
 
 const moveRight = ()=>{
-    
+    playerPosition.x -= elementsSize;
+    movePlayer();
+    return;
 };
 
 const moveDown = ()=>{
-    
+    playerPosition.y += elementsSize;
+    movePlayer();
+    return;
 };
 
 
