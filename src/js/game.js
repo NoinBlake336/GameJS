@@ -12,7 +12,7 @@ const startGame = () =>{
     game.textAling = 'end';
 
 
-    const map = maps[0];
+    const map = maps[1];
     const mapRows = map.trim().split('\n');
     const mapRowCols = mapRows.map(row => row.trim().split(''));
 
