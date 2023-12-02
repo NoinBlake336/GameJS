@@ -24,15 +24,15 @@ const setcanvasSizes = ()=>{
 
 
     if(window.innerHeight > window.innerWidth){
-        canvasSize = window.innerWidth * 0.8;
+        canvasSize = window.innerWidth * 1;
     }else{
-        canvasSize = window.innerHeight * 0.8
+        canvasSize = window.innerHeight * 1
     }
 
     canvas.setAttribute('width',canvasSize);
     canvas.setAttribute('height', canvasSize);
 
-    elementsSize = canvasSize / 8;
+    elementsSize = canvasSize / 10;
     console.log(elementsSize);
     startGame();
 };
