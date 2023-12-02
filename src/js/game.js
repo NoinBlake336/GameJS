@@ -38,8 +38,7 @@ const movePlayer = ()=>{
         return enemyCollitionX && enemyCollitionY;
     });
     if(enemyCollition){
-        alert('Chocaste contra enemigo');
-        return;
+        console.log('Chocaste contra enemigo');
     }
 
     game.fillText(emojis['PLAYER'], playerPosition.x-25,playerPosition.y);
