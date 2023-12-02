@@ -12,7 +12,7 @@ const startGame = () =>{
     game.textAling = 'end';
 
     for (let i = 1; i < 10; i++) {
-        game.fillText(emojis['X'],elementsSize*i,elementsSize*i);
+        game.fillText(emojis['X'],elementsSize*i,elementsSize);
     };
 
 };
