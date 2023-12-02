@@ -36,7 +36,7 @@ const movePlayer = ()=>{
     const giftCollition = giftcollitionX && giftcollitionY; 
 
     if(giftCollition){
-        return;
+        levelWin();
     };
 
     const enemyCollition = enemyPositions.find(enemy =>{
@@ -45,7 +45,7 @@ const movePlayer = ()=>{
         return enemyCollitionX && enemyCollitionY;
     });
     if(enemyCollition){
-        levelWin();
+        console.log('enemigos');
     }
 
     game.fillText(emojis['PLAYER'], playerPosition.x-25,playerPosition.y);
