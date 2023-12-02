@@ -39,6 +39,7 @@ const levelFail = () =>{
     lives--;
     if(lives <= 0){
         level = 0;
+        lives = 3;
     }
 
     playerPosition.x = undefined;
