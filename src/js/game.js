@@ -73,6 +73,9 @@ const setcanvasSizes = ()=>{
 const moveUp = ()=>{
     console.log('UP');
     playerPosition.y -= elementsSize;
+    if(canvasSize>playerPosition.y){
+        playerPosition.y = playerPosition.y;
+    }
     startGame();
     
 };
