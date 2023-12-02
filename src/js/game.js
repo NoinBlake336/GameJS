@@ -11,7 +11,7 @@ const startGame = () =>{
     game.font = elementsSize + 'px Verdana';
     game.textAling = 'end';
 
-    for (let row = 0; row <=11; row++) {
+    for (let row = 0; row <=10; row++) {
         for (let cols = 1; cols <= 10; cols++ ){
             game.fillText(emojis['X'],elementsSize * cols,elementsSize * row);
         }
