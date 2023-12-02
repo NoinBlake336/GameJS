@@ -74,14 +74,14 @@ maps.push(`
   X-XXXXXXX
   X-XXXXXXX
   X-XXXXXXX
-  XX-----XX
-  XX----XXX
+  X------XX
+  X-----XXX
   XXXXX---X
   XXXXXXX-I
 `);
 
 maps.push(`
-  O-XXXXXXXX
+  I-XXXXXXXX
   XX-XXXXXX
   XX------X
   XX-XXXXXX
@@ -90,7 +90,7 @@ maps.push(`
   XX-XXXXXX
   XX--XXXXX
   XX------X
-  XXXXXXX-I
+  XXXXXXX-O
 `);
 
 
