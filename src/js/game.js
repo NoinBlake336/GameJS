@@ -94,6 +94,7 @@ const moveDown = ()=>{
 
 
 const moveByKeys = (key)=>{
+    console.log(key.keyCode)
     switch (key) {
         case key.keyCode == 38:
             moveUp();
