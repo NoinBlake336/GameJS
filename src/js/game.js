@@ -7,8 +7,7 @@ let elementsSize;
 
 // Funcion principal;
 const startGame = () =>{
-    setcanvasSizes();
-
+    
     game.font = elementsSize + 'px Verdana';
     game.textAling = 'end';
 
@@ -32,7 +31,7 @@ const setcanvasSizes = ()=>{
     canvas.setAttribute('height', canvasSize);
 
     elementsSize = canvasSize / 10;
-
+    console.log(elementsSize);
     startGame();
 };
 
