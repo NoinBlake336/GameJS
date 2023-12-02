@@ -94,9 +94,11 @@ const moveDown = ()=>{
 
 
 const moveByKeys = (key)=>{
-    console.log(key.keyCode)
 
     if(key.keyCode==38) moveUp();
+    else if(key.keyCode == 40) moveDown();
+    else if(key.keyCode == 37) moveRight();
+    else if(key.keyCode == 39) moveLeft();
     
 };
 
