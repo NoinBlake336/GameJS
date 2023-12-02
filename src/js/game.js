@@ -16,13 +16,26 @@ const startGame = () =>{
     const mapRows = map.trim().split('\n');
     const mapRowCols = mapRows.map(row => row.trim().split(''));
 
+    mapRowCols.forEach(element => {
+        
+    });
 
-    for (let row = 1; row <=10; row++) {
-        for (let cols = 1; cols <= 10; cols++ ){
-            game.fillText(emojis[mapRowCols[row - 1][cols - 1]]
-                ,(elementsSize*cols)-25,(elementsSize*row));
-        }
-    };
+    mapRowCols.forEach((row,rowI) =>{
+        row.forEach((col,colI)=>{
+            const emoji = emojis[col];
+            const posX = elementsSize * (colI + 1);
+            const posY = elementsSize * (rowI + 1);
+            game.fillText(emoji,posX,posY);
+            
+        });
+    });
+
+    // for (let row = 1; row <=10; row++) {
+    //     for (let cols = 1; cols <= 10; cols++ ){
+    //         game.fillText(emojis[mapRowCols[row - 1][cols - 1]]
+    //             ,(elementsSize*cols)-25,(elementsSize*row));
+    //     }
+    // };
 
 };
 
