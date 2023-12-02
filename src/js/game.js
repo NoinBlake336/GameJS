@@ -124,7 +124,7 @@ const moveUp = ()=>{
 };
 
 const moveLeft = ()=>{
-    if(((playerPosition.x - elementsSize)-25) < elementsSize){
+    if(((playerPosition.x - elementsSize)) < elementsSize){
         return;
     }else{
         playerPosition.x -= elementsSize;
@@ -134,7 +134,7 @@ const moveLeft = ()=>{
 };
 
 const moveRight = ()=>{
-    if(((playerPosition.x + elementsSize)-25) > canvasSize){
+    if(((playerPosition.x + elementsSize)) > canvasSize){
         return;
     }else{
         playerPosition.x += elementsSize;
@@ -144,7 +144,7 @@ const moveRight = ()=>{
 };
 
 const moveDown = ()=>{
-    if(((playerPosition.y + elementsSize)-25) > canvasSize){
+    if(((playerPosition.y + elementsSize)) > canvasSize){
         return;
     }else{
         playerPosition.y += elementsSize;
