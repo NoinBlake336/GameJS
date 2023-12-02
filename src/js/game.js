@@ -16,9 +16,6 @@ const startGame = () =>{
     const mapRows = map.trim().split('\n');
     const mapRowCols = mapRows.map(row => row.trim().split(''));
 
-    mapRowCols.forEach(element => {
-        
-    });
 
     mapRowCols.forEach((row,rowI) =>{
         row.forEach((col,colI)=>{
