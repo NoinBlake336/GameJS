@@ -33,8 +33,8 @@ const movePlayer = ()=>{
     };
 
     const enemyCollition = enemyPositions.find(enemy =>{
-        const enemyCollitionX = enemy.x == playerPosition.x;
-        const enemyCollitionY = enemy.y == playerPosition.y;
+        const enemyCollitionX = enemy.x.toFixed(3) == playerPosition.x.toFixed(3);
+        const enemyCollitionY = enemy.y.toFixed(3) == playerPosition.y.toFixed(3);
         return enemyCollitionX && enemyCollitionY;
     });
     if(enemyCollition){
