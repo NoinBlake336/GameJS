@@ -69,25 +69,25 @@ const setcanvasSizes = ()=>{
 const moveUp = ()=>{
     playerPosition.y -= elementsSize;
     movePlayer();
-    return;
+    
 };
 
 const moveLeft = ()=>{
     playerPosition.x -= elementsSize;
     movePlayer();
-    return;
+    
 };
 
 const moveRight = ()=>{
     playerPosition.x += elementsSize;
     movePlayer();
-    return;
+    
 };
 
 const moveDown = ()=>{
     playerPosition.y += elementsSize;
     movePlayer();
-    return;
+    
 };
 
 
