@@ -73,13 +73,13 @@ const moveUp = ()=>{
 };
 
 const moveLeft = ()=>{
-    playerPosition.x += elementsSize;
+    playerPosition.x -= elementsSize;
     movePlayer();
     return;
 };
 
 const moveRight = ()=>{
-    playerPosition.x -= elementsSize;
+    playerPosition.x += elementsSize;
     movePlayer();
     return;
 };
