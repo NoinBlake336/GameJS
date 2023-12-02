@@ -49,8 +49,8 @@ const startGame = () =>{
 
         });
     });
-
     movePlayer();
+
 };
 
 // Responsive canvas;
