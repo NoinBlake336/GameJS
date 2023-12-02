@@ -11,8 +11,8 @@ const startGame = () =>{
     game.font = elementsSize + 'px Verdana';
     game.textAling = 'end';
 
-    for (let row = 0; row <=10; row++) {
-        for (let cols = 1; cols <= 10; cols++ ){
+    for (let row = 1; row <=10; row++) {
+        for (let cols = 0; cols <= 10; cols++ ){
             game.fillText(emojis['X'],elementsSize * cols,elementsSize * row);
         }
     };
@@ -28,7 +28,7 @@ const setcanvasSizes = ()=>{
     canvas.setAttribute('width',canvasSize);
     canvas.setAttribute('height', canvasSize);
 
-    elementsSize = (canvasSize / 10) ;
+    elementsSize = (canvasSize / 10)-1 ;
     console.log(elementsSize);
     startGame();
 };
