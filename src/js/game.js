@@ -20,7 +20,7 @@ const startGame = () =>{
     for (let row = 1; row <=10; row++) {
         for (let cols = 1; cols <= 10; cols++ ){
             game.fillText(emojis[mapRowCols[row - 1][cols - 1]]
-                ,elementsSize - 16,elementsSize - 8);
+                ,(elementsSize*row)+12,(elementsSize*cols)-8);
         }
     };
 
