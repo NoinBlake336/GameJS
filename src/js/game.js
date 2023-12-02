@@ -45,7 +45,7 @@ const startGame = () =>{
         });
     });
 
-    game.fillText(emojis['PLAYER'], playerPosition.x,playerPosition.y);
+    game.fillText(emojis['PLAYER'], playerPosition.x-25,playerPosition.y);
 };
 
 // Responsive canvas;
