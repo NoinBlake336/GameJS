@@ -92,6 +92,7 @@ const moveDown = ()=>{
 
 
 const moveByKeys = (key)=>{
+    console.log(key);
     switch (key) {
         case key.key == 'ArrowUp':
             moveUp();
