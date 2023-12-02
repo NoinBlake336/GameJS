@@ -117,7 +117,7 @@ btnLeft.addEventListener('click', moveLeft);
 btnRight.addEventListener('click', moveRight);
 btnDown.addEventListener('click', moveDown);
 
-window.addEventListener('mousedown',moveByKeys);
+window.addEventListener('keydown',moveByKeys);
 window.addEventListener('load', setcanvasSizes);
 window.addEventListener('resize', setcanvasSizes);
 
