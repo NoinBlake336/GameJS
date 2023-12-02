@@ -36,16 +36,16 @@ const startGame = () =>{
 
 
             if(col == 'O'){
-                playerPosition.x = posX-25;
+                playerPosition.x = posX;
                 playerPosition.y = posY;
             };
 
-            game.fillText(emoji,posX,posY);
+            game.fillText(emoji,posX-25,posY);
 
         });
     });
 
-    game.fillText(emojis['PLAYER'], playerPosition.y,playerPosition.x);
+    game.fillText(emojis['PLAYER'], playerPosition.x,playerPosition.y);
 };
 
 // Responsive canvas;
