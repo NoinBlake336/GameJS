@@ -81,10 +81,10 @@ maps.push(`
 `);
 
 maps.push(`
-  I-XXXXXXXX
+  I--XXXXXXX
   XX-XXXXXX
   XX------X
-  XX-XXXXXX
+  X--XXXXXX
   X-XXXXXXX
   X--XXXXXX
   XX-XXXXXX
