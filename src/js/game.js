@@ -18,6 +18,7 @@ const playerPosition = {
 
 // Movimineto Jugador
 const movePlayer = ()=>{
+    console.log('UP');
     game.fillText(emojis['PLAYER'], playerPosition.x-25,playerPosition.y);
 };
 
