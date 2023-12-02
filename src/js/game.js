@@ -4,13 +4,14 @@ const btnUp = document.querySelector('#up');
 const btnLeft = document.querySelector('#left');
 const btnRight = document.querySelector('#right');
 const btnDown = document.querySelector('#down');
-
-
+const hearth = document.querySelector('#lives');
+const levelCount = document.querySelector('#level');
 
 let canvasSize;
 let elementsSize;
 let level = 0;
 let lives = 3;
+
 const playerPosition = {
     x: undefined,
     y: undefined,
@@ -71,7 +72,8 @@ const movePlayer = ()=>{
 
 // Funcion principal;
 const startGame = () =>{
-    
+    hearth.innerHTML = lives;
+    levelCount.innerHTML = level+1;
     game.font = elementsSize + 'px Verdana';
     game.textAling = 'end';
 
