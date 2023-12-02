@@ -14,10 +14,10 @@ const startGame = () =>{
 
     const map = maps[0];
     const mapRows = map.trim().split('\n');
-    const mapRowCols = mapRows.map(row => row.trim().split('')) 
+    const mapRowCols = mapRows.map(row => row.trim().split(''));
 
     for (let row = 1; row <=10; row++) {
-        for (let cols = 1; cols <= 10; cols++ ){
+        for (let cols = 0; cols <= 10; cols++ ){
             game.fillText(emojis[mapRowCols[row -1][cols -1]],elementsSize * cols,elementsSize * row);
         }
     };
