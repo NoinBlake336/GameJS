@@ -121,8 +121,7 @@ const moveLeft = ()=>{
 };
 
 const moveRight = ()=>{
-    if(((playerPosition.x + elementsSize)+25) > canvasSize){
-        console.log(playerPosition.x, (((playerPosition.x + elementsSize)+25) > canvasSize), canvasSize);
+    if(((playerPosition.x + elementsSize)-25) > canvasSize){
         return;
     }else{
         playerPosition.x += elementsSize;
