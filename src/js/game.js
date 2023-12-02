@@ -25,8 +25,8 @@ const startGame = () =>{
             const emoji = emojis[col];
             const posX = elementsSize * (colI + 1);
             const posY = elementsSize * (rowI + 1);
-            game.fillText(emoji,posX,posY);
-            
+            game.fillText(emoji,posX-25,posY);
+
         });
     });
 
