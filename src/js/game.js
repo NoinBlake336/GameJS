@@ -10,7 +10,7 @@ const btnDown = document.querySelector('#down');
 let canvasSize;
 let elementsSize;
 let level = 0;
-
+let lives = 3;
 const playerPosition = {
     x: undefined,
     y: undefined,
@@ -36,8 +36,14 @@ const levelWin = ()=>{
 
 // Posicion Actual
 const levelFail = () =>{
+    lives--;
+    if(lives <= 0){
+        level = 0;
+    }
+
     playerPosition.x = undefined;
     playerPosition.y = undefined;
+    startGame();
 }
 
 // Movimineto Jugador
