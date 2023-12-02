@@ -12,7 +12,9 @@ const startGame = () =>{
     game.textAling = 'end';
 
     for (let i = 1; i < 10; i++) {
-        game.fillText(emojis['X'],elementsSize*i,elementsSize);
+        for (let j = 1; j < 10; j++ ){
+            game.fillText(emojis['X']['X'],elementsSize,elementsSize);
+        }
     };
 
 };
