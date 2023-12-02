@@ -94,18 +94,17 @@ const moveDown = ()=>{
 
 
 const moveByKeys = (key)=>{
-    console.log(key);
     switch (key) {
-        case key.key == 'ArrowUp':
+        case key.key == 38:
             moveUp();
             break;
-        case key.key == 'ArrowLeft':
+        case key.key ==37:
             moveLeft();
             break;
-        case key.key == 'ArrowRight':
+        case key.key == 39:
             moveRight();
             break;
-        case key.key == 'ArrowDown':
+        case key.key == 40:
             moveDown();
             break;
         default:
