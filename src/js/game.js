@@ -32,7 +32,7 @@ const setcanvasSizes = ()=>{
     canvas.setAttribute('width',canvasSize);
     canvas.setAttribute('height', canvasSize);
 
-    elementsSize = canvasSize / 5;
+    elementsSize = canvasSize / 8;
     console.log(elementsSize);
     startGame();
 };
