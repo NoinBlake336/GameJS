@@ -9,7 +9,7 @@ const btnDown = document.querySelector('#down');
 
 let canvasSize;
 let elementsSize;
-
+let level = 0;
 
 const playerPosition = {
     x: undefined,
@@ -22,6 +22,13 @@ const giftPosition = {
 };
 
 let enemyPositions = [];
+
+// Siguiente Nivel 
+const levelWin = ()=>{
+    level ++
+    startGame();
+} 
+
 // Movimineto Jugador
 const movePlayer = ()=>{
     const giftcollitionX = playerPosition.x.toFixed(3) == giftPosition.x.toFixed(3);
@@ -38,7 +45,7 @@ const movePlayer = ()=>{
         return enemyCollitionX && enemyCollitionY;
     });
     if(enemyCollition){
-        console.log('Chocaste contra enemigo');
+        levelWin();
     }
 
     game.fillText(emojis['PLAYER'], playerPosition.x-25,playerPosition.y);
@@ -51,7 +58,13 @@ const startGame = () =>{
     game.textAling = 'end';
 
 
-    const map = maps[1];
+    const map = maps[level];
+
+    if(!map){
+        alert('has completado el juego');
+        return;
+    }
+
     const mapRows = map.trim().split('\n');
     const mapRowCols = mapRows.map(row => row.trim().split(''));
 
