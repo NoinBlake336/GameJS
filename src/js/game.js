@@ -23,11 +23,7 @@ const startGame = () =>{
 const setcanvasSizes = ()=>{
 
 
-    if(window.innerHeight > window.innerWidth){
-        canvasSize = window.innerWidth * 0.8;
-    }else{
-        canvasSize = window.innerHeight * 0.8
-    }
+    canvasSize = window.innerWidth > window.innerHeight ? window.innerHeight * 0.7 : window.innerWidth * 0.9
 
     canvas.setAttribute('width',canvasSize);
     canvas.setAttribute('height', canvasSize);
