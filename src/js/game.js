@@ -13,12 +13,35 @@ let elementsSize;
 
 const playerPosition = {
     x: undefined,
-    y: undefined
+    y: undefined,
 };
 
+const giftPosition = {
+    x: undefined,
+    y:undefined,
+};
+
+let enemyPositions = [];
 // Movimineto Jugador
 const movePlayer = ()=>{
-    console.log('UP');
+    const giftcollitionX = playerPosition.x.toFixed(3) == giftPosition.x.toFixed(3);
+    const giftcollitionY = playerPosition.y.toFixed(3) == giftPosition.y.toFixed(3);
+    const giftCollition = giftcollitionX && giftcollitionY; 
+
+    if(giftCollition){
+        return;
+    };
+
+    const enemyCollition = enemyPositions.find(enemy =>{
+        const enemyCollitionX = enemy.x == playerPosition.x;
+        const enemyCollitionY = enemy.y == playerPosition.y;
+        return enemyCollitionX && enemyCollitionY;
+    });
+    if(enemyCollition){
+        alert('Chocaste contra enemigo');
+        return;
+    }
+
     game.fillText(emojis['PLAYER'], playerPosition.x-25,playerPosition.y);
 };
 
@@ -33,6 +56,7 @@ const startGame = () =>{
     const mapRows = map.trim().split('\n');
     const mapRowCols = mapRows.map(row => row.trim().split(''));
 
+    enemyPositions = [];
     game.clearRect(0,0,canvasSize,canvasSize);
 
     mapRowCols.forEach((row,rowI) =>{
@@ -47,6 +71,13 @@ const startGame = () =>{
                     playerPosition.x = posX;
                     playerPosition.y = posY;
                 }
+            }else if(col=='I'){
+                giftPosition.x = posX;
+                giftPosition.y = posY;
+            }else if(col == 'X'){
+                enemyPositions.push({
+                    x:posX,y:posY
+                });
             };
 
             game.fillText(emoji,posX-25,posY);
