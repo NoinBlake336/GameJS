@@ -4,6 +4,8 @@ const game = canvas.getContext('2d');
 let canvasSize;
 let elementsSize;
 
+
+// Funcion principal;
 const startGame = () =>{
     setcanvasSizes();
 
@@ -16,7 +18,7 @@ const startGame = () =>{
 
 };
 
-
+// Responsive canvas;
 const setcanvasSizes = ()=>{
 
 
@@ -31,9 +33,10 @@ const setcanvasSizes = ()=>{
 
     elementsSize = canvasSize / 10;
 
-}
+    startGame();
+};
 
 
 
-window.addEventListener('load', startGame);
+window.addEventListener('load', setcanvasSizes);
 window.addEventListener('resize', setcanvasSizes);
