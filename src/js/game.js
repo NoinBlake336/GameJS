@@ -11,9 +11,14 @@ const startGame = () =>{
     game.font = elementsSize + 'px Verdana';
     game.textAling = 'end';
 
+
+    const map = maps[0];
+    const mapRows = map[0].trim().split('\n');
+    const mapRowCols = mapRows.map(row => row.trim().split('')) 
+
     for (let row = 1; row <=10; row++) {
         for (let cols = 0; cols <= 10; cols++ ){
-            game.fillText(emojis['X'],elementsSize * cols,elementsSize * row);
+            game.fillText(emojis[mapRowCols[row - 1][cols - 1]],elementsSize * cols,elementsSize * row);
         }
     };
 
