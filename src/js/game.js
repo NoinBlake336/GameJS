@@ -115,6 +115,7 @@ const setcanvasSizes = ()=>{
 
 const moveUp = ()=>{
     if((playerPosition.y - elementsSize) < elementsSize){
+        console.log('UP')
         return;
     }else{
         playerPosition.y -= elementsSize;
