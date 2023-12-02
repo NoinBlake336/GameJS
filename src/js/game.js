@@ -33,6 +33,7 @@ const startGame = () =>{
     const mapRows = map.trim().split('\n');
     const mapRowCols = mapRows.map(row => row.trim().split(''));
 
+    game.clearRect(0,0,canvasSize,canvasSize);
 
     mapRowCols.forEach((row,rowI) =>{
         row.forEach((col,colI)=>{
@@ -42,8 +43,10 @@ const startGame = () =>{
 
 
             if(col == 'O'){
-                playerPosition.x = posX;
-                playerPosition.y = posY;
+                if(!playerPosition.x && !playerPosition.y){
+                    playerPosition.x = posX;
+                    playerPosition.y = posY;
+                }
             };
 
             game.fillText(emoji,posX-25,posY);
@@ -70,25 +73,25 @@ const setcanvasSizes = ()=>{
 const moveUp = ()=>{
     console.log('UP');
     playerPosition.y -= elementsSize;
-    movePlayer();
+    startGame();
     
 };
 
 const moveLeft = ()=>{
     playerPosition.x -= elementsSize;
-    movePlayer();
+    startGame();
     
 };
 
 const moveRight = ()=>{
     playerPosition.x += elementsSize;
-    movePlayer();
+    startGame();
     
 };
 
 const moveDown = ()=>{
     playerPosition.y += elementsSize;
-    movePlayer();
+    startGame();
     
 };
 
