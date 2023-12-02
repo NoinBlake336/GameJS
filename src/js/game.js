@@ -36,11 +36,11 @@ const startGame = () =>{
 
 
             if(col == 'O'){
-                playerPosition.x = posX;
+                playerPosition.x = posX-25;
                 playerPosition.y = posY;
             };
 
-            game.fillText(emoji,posX-25,posY);
+            game.fillText(emoji,posX,posY);
 
         });
     });
