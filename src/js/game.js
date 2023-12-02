@@ -71,30 +71,42 @@ const setcanvasSizes = ()=>{
 
 
 const moveUp = ()=>{
-    console.log('UP');
-    playerPosition.y -= elementsSize;
-    if(canvasSize>playerPosition.y){
-        playerPosition.y = playerPosition.y;
+    if((playerPosition.y - elementsSize) < elementsSize){
+        return;
+    }else{
+        playerPosition.y -= elementsSize;
+        startGame();
     }
-    startGame();
     
 };
 
 const moveLeft = ()=>{
-    playerPosition.x -= elementsSize;
-    startGame();
+    if((playerPosition.x - elementsSize) < elementsSize){
+        return;
+    }else{
+        playerPosition.x -= elementsSize;
+        startGame();
+    }
     
 };
 
 const moveRight = ()=>{
-    playerPosition.x += elementsSize;
-    startGame();
+    if((playerPosition.x + elementsSize) > canvasSize){
+        return;
+    }else{
+        playerPosition.x += elementsSize;
+        startGame();
+    }
     
 };
 
 const moveDown = ()=>{
-    playerPosition.y += elementsSize;
-    startGame();
+    if((playerPosition.y + elementsSize) > canvasSize){
+        return;
+    }else{
+        playerPosition.y += elementsSize;
+        startGame();
+    }
     
 };
 
