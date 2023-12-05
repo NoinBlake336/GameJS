@@ -7,7 +7,15 @@ const btnDown = document.querySelector('#down');
 const hearth = document.querySelector('#lives');
 const levelCount = document.querySelector('#level');
 
-game.load.spritesheet("button", "img/reset.png", 120, 40);
+var boton = {
+    x: 50,
+    y: 30,
+    ancho: 100,
+    alto: 40,
+    color: 'blue',
+    texto: 'Reiniciar',
+    presionado: false
+};
 
 let canvasSize;
 let elementsSize;
@@ -26,23 +34,65 @@ const giftPosition = {
 
 let enemyPositions = [];
 
+    // Función para dibujar el botón en el canvas
+const dibujarBoton = () => {
+        game.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Dibujar el botón
+        game.fillStyle = boton.color;
+        game.fillRect(boton.x, boton.y, boton.ancho, boton.alto);
+
+        // Configurar el texto
+        game.fillStyle = 'white';
+        game.font = '16px Arial';
+        game.textAlign = 'center';
+        game.textBaseline = 'middle';
+
+        // Dibujar el texto en el centro del botón
+        game.fillText(boton.texto, boton.x + boton.ancho / 2, boton.y + boton.alto / 2);
+}
+
 // Juego Ganado
 const gameWin = ()=>{
     game.font = elementsSize + 'px Verdana';
     game.textAling = 'end';
     game.clearRect(0,0,canvasSize,canvasSize);
     game.fillText("HAS GANADO!!",elementsSize,elementsSize);
-    startButton = game.add.button(
-        game.world.width * 0.5,
-        game.world.height * 0.5,
-        "button",
-        startGame,
-        this,
-        1,
-        0,
-        2,
-      );
-      startButton.anchor.set(0.5);
+
+
+
+
+
+    // Función para manejar el clic en el botón
+    const clicEnBoton = (event)=> {
+        var rect = canvas.getBoundingClientRect();
+        var mouseX = event.clientX - rect.left;
+        var mouseY = event.clientY - rect.top;
+
+        if (
+            mouseX >= boton.x &&
+            mouseX <= boton.x + boton.ancho &&
+            mouseY >= boton.y &&
+            mouseY <= boton.y + boton.alto
+        ) {
+            // El clic ocurrió dentro del botón
+            boton.presionado = true;
+            // Ejecutar la función que desees cuando se presiona el botón
+            ejecutarFuncion();
+        }
+    }
+
+    // Función que se ejecuta cuando se presiona el botón
+    function ejecutarFuncion() {
+        alert('Botón presionado');
+    }
+
+    // Agregar un evento de clic al canvas
+    canvas.addEventListener('click', clicEnBoton);
+
+    // Llamar a la función para dibujar el botón inicialmente
+    dibujarBoton();
+
 };
 
 // Siguiente Nivel 
