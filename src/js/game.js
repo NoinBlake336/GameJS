@@ -7,6 +7,8 @@ const btnDown = document.querySelector('#down');
 const hearth = document.querySelector('#lives');
 const levelCount = document.querySelector('#level');
 
+game.load.spritesheet("button", "img/reset.png", 120, 40);
+
 let canvasSize;
 let elementsSize;
 let level = 0;
@@ -26,7 +28,21 @@ let enemyPositions = [];
 
 // Juego Ganado
 const gameWin = ()=>{
-
+    game.font = elementsSize + 'px Verdana';
+    game.textAling = 'end';
+    game.clearRect(0,0,canvasSize,canvasSize);
+    game.fillText("HAS GANADO!!",elementsSize,elementsSize);
+    startButton = game.add.button(
+        game.world.width * 0.5,
+        game.world.height * 0.5,
+        "button",
+        startGame,
+        this,
+        1,
+        0,
+        2,
+      );
+      startButton.anchor.set(0.5);
 };
 
 // Siguiente Nivel 
