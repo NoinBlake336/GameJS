@@ -28,69 +28,69 @@ const emojis = {
     -XXXXXXXXX
     OXXXXXXXXX
   `);
-//   maps.push(`
-//     O--XXXXXXX
-//     X--XXXXXXX
-//     XX----XXXX
-//     X--XX-XXXX
-//     X-XXX--XXX
-//     X-XXXX-XXX
-//     XX--XX--XX
-//     XX--XXX-XX
-//     XXXX---IXX
-//     XXXXXXXXXX
-//     `);
-//   maps.push(`
-//     I-----XXXX
-//     XXXXX-XXXX
-//     XX----XXXX
-//     XX-XXXXXXX
-//     XX-----XXX
-//     XXXXXX-XXX
-//     XX-----XXX
-//     XX-XXXXXXX
-//     XX-----OXX
-//     XXXXXXXXXX
-//   `);
+  maps.push(`
+    O--XXXXXXX
+    X--XXXXXXX
+    XX----XXXX
+    X--XX-XXXX
+    X-XXX--XXX
+    X-XXXX-XXX
+    XX--XX--XX
+    XX--XXX-XX
+    XXXX---IXX
+    XXXXXXXXXX
+    `);
+  maps.push(`
+    I-----XXXX
+    XXXXX-XXXX
+    XX----XXXX
+    XX-XXXXXXX
+    XX-----XXX
+    XXXXXX-XXX
+    XX-----XXX
+    XX-XXXXXXX
+    XX-----OXX
+    XXXXXXXXXX
+  `);
 
 
-//   maps.push(`
-//   O-----XX-I
-//   XXXXX-XX-X
-//   XX----XX-X
-//   XX-XXXXX-X
-//   XX-----X-X
-//   XXXXXX-X-X
-//   XX-----X-X
-//   XX-XXXXX-X
-//   XX-------X
-//   XXXXXXXXXX
-// `);
+  maps.push(`
+  O-----XX-I
+  XXXXX-XX-X
+  XX----XX-X
+  XX-XXXXX-X
+  XX-----X-X
+  XXXXXX-X-X
+  XX-----X-X
+  XX-XXXXX-X
+  XX-------X
+  XXXXXXXXXX
+`);
 
-// maps.push(`
-//   O---XXXXXX
-//   XX-XXXXXX
-//   X------XX
-//   X-XXXXXXX
-//   X-XXXXXXX
-//   X-XXXXXXX
-//   X------XX
-//   X-----XXX
-//   XXXXX---X
-//   XXXXXXX-I
-// `);
+maps.push(`
+  O---XXXXXX
+  XX-XXXXXX
+  X------XX
+  X-XXXXXXX
+  X-XXXXXXX
+  X-XXXXXXX
+  X------XX
+  X-----XXX
+  XXXXX---X
+  XXXXXXX-I
+`);
 
-// maps.push(`
-//   I--XXXXXXX
-//   XX-XXXXXX
-//   XX------X
-//   X--XXXXXX
-//   X-XXXXXXX
-//   X--XXXXXX
-//   XX-XXXXXX
-//   XX--XXXXX
-//   XX------X
-//   XXXXXXX-O
-// `);
+maps.push(`
+  I--XXXXXXX
+  XX-XXXXXX
+  XX------X
+  X--XXXXXX
+  X-XXXXXXX
+  X--XXXXXX
+  XX-XXXXXX
+  XX--XXXXX
+  XX------X
+  XXXXXXX-O
+`);
 
 
