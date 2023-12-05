@@ -8,11 +8,11 @@ const hearth = document.querySelector('#lives');
 const levelCount = document.querySelector('#level');
 
 var boton = {
-    x: 50,
-    y: 30,
+    x: 135,
+    y: 175,
     ancho: 100,
     alto: 40,
-    color: 'blue',
+    color: '#ff6600',
     texto: 'Reiniciar',
     presionado: false
 };
@@ -77,14 +77,11 @@ const gameWin = ()=>{
         ) {
             // El clic ocurrió dentro del botón
             boton.presionado = true;
-            // Ejecutar la función que desees cuando se presiona el botón
-            ejecutarFuncion();
+            level = 0;
+            playerPosition.x = 28.8;
+            playerPosition.y = 288;
+            startGame();
         }
-    }
-
-    // Función que se ejecuta cuando se presiona el botón
-    function ejecutarFuncion() {
-        alert('Botón presionado');
     }
 
     // Agregar un evento de clic al canvas
