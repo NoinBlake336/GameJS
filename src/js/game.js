@@ -5,6 +5,9 @@ const btnLeft = document.querySelector('#left');
 const btnRight = document.querySelector('#right');
 const btnDown = document.querySelector('#down');
 const spanLives = document.querySelector('#lives');
+const spanTime = document.querySelector('#time');
+const spanRecord = document.querySelector('#record');
+const pResult = document.querySelector('#result');
 
 let canvasSize;
 let elementsSize;
@@ -14,6 +17,8 @@ let lives = 3;
 let timeStart;
 let timePlayer;
 let timeInterval;
+
+let isGameFinished = false;
 
 const playerPosition = {
   x: undefined,
@@ -52,9 +57,6 @@ function setCanvasSize() {
 }
 
 function startGame() {
-  console.log({ canvasSize, elementsSize });
-  // console.log(window.innerWidth, window.innerHeight);
-
   game.font = elementsSize + 'px Verdana';
   game.textAlign = 'end';
 
@@ -65,11 +67,14 @@ function startGame() {
     return;
   }
 
-
+  if (!timeStart) {
+    timeStart = Date.now();
+    timeInterval = setInterval(showTime, 100);
+    showRecord();
+  }
   
   const mapRows = map.trim().split('\n');
   const mapRowCols = mapRows.map(row => row.trim().split(''));
-  console.log({map, mapRows, mapRowCols});
 
   showLives();
   
@@ -86,7 +91,6 @@ function startGame() {
         if (!playerPosition.x && !playerPosition.y) {
           playerPosition.x = posX;
           playerPosition.y = posY;
-          // console.log({playerPosition});
         }
       } else if (col == 'I') {
         giftPosition.x = posX;
@@ -106,8 +110,8 @@ function startGame() {
 }
 
 function movePlayer() {
-  const giftCollisionX = playerPosition.x.toFixed(3) == giftPosition.x.toFixed(3);
-  const giftCollisionY = playerPosition.y.toFixed(3) == giftPosition.y.toFixed(3);
+  const giftCollisionX = playerPosition.x.toFixed(2) == giftPosition.x.toFixed(2);
+  const giftCollisionY = playerPosition.y.toFixed(2) == giftPosition.y.toFixed(2);
   const giftCollision = giftCollisionX && giftCollisionY;
   
   if (giftCollision) {
@@ -149,24 +153,40 @@ function levelFail() {
 }
 
 function gameWin() {
-  console.log('¡Terminaste el juego!');
   clearInterval(timeInterval);
 
   const recordTime = localStorage.getItem('record_time');
   const playerTime = Date.now() - timeStart;
 
-
-  console.log({recordTime, playerTime});
+  if (recordTime) {
+    if (recordTime >= playerTime) {
+      localStorage.setItem('record_time', playerTime);
+      pResult.innerHTML = 'SUPERASTE EL RECORD :)';
+    } else {
+      pResult.innerHTML = 'lo siento, no superaste el records :(';
+    };
+  };
+    
+  setTimeout(()=>{
+      location.reload();
+  },1500);
+    
 }
 
 function showLives() {
   const heartsArray = Array(lives).fill(emojis['HEART']); // [1,2,3]
+  
   spanLives.innerHTML = "";
   heartsArray.forEach(heart => spanLives.append(heart));
 }
 
+function showTime() {
+  spanTime.innerHTML = Date.now() - timeStart;
+}
 
-
+function showRecord() {
+  spanRecord.innerHTML = localStorage.getItem('record_time');
+}
 
 window.addEventListener('keydown', moveByKeys);
 btnUp.addEventListener('click', moveUp);
@@ -181,42 +201,24 @@ function moveByKeys(event) {
   else if (event.key == 'ArrowDown') moveDown();
 }
 function moveUp() {
-  console.log('Me quiero mover hacia arriba');
 
-  if ((playerPosition.y - elementsSize) < elementsSize) {
-    console.log('OUT');
-  } else {
     playerPosition.y -= elementsSize;
     startGame();
-  }
+  
 }
 function moveLeft() {
-  console.log('Me quiero mover hacia izquierda');
 
-  if ((playerPosition.x - elementsSize) < elementsSize) {
-    console.log('OUT');
-  } else {
     playerPosition.x -= elementsSize;
     startGame();
-  }
+  
 }
 function moveRight() {
-  console.log('Me quiero mover hacia derecha');
 
-  if ((playerPosition.x + elementsSize) > canvasSize) {
-    console.log('OUT');
-  } else {
     playerPosition.x += elementsSize;
     startGame();
-  }
+  
 }
 function moveDown() {
-  console.log('Me quiero mover hacia abajo');
-  
-  if ((playerPosition.y + elementsSize) > canvasSize) {
-    console.log('OUT');
-  } else {
     playerPosition.y += elementsSize;
     startGame();
-  }
 }

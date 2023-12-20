@@ -17,20 +17,20 @@ const emojis = {
   
   const maps = [];
   maps.push(`
-    IXXXXXXXXX
-    -XXXXXXXXX
-    -XXXXXXXXX
-    -XXXXXXXXX
-    -XXXXXXXXX
-    -XXXXXXXXX
-    -XXXXXXXXX
-    -XXXXXXXXX
-    -XXXXXXXXX
-    OXXXXXXXXX
+    XXXXXXXXXX
+    XIXXXXXXXX
+    X-XXXXXXXX
+    X-XXXXXXXX
+    X-XXXXXXXX
+    X-XXXXXXXX
+    X-XXXXXXXX
+    X-XXXXXXXX
+    X-XXXXXXXX
+    XOXXXXXXXX
   `);
   maps.push(`
-    O--XXXXXXX
-    X--XXXXXXX
+    XXXXXXXXXX
+    XO-XXXXXXX
     XX----XXXX
     X--XX-XXXX
     X-XXX--XXX
@@ -55,9 +55,9 @@ const emojis = {
 
 
   maps.push(`
-  O-----XX-I
-  XXXXX-XX-X
-  XX----XX-X
+  XXXXXXXXXX
+  XXXXOXXI-X
+  XX---XXX-X
   XX-XXXXX-X
   XX-----X-X
   XXXXXX-X-X
@@ -68,29 +68,29 @@ const emojis = {
 `);
 
 maps.push(`
-  O---XXXXXX
-  XX-XXXXXX
-  X------XX
-  X-XXXXXXX
-  X-XXXXXXX
-  X-XXXXXXX
-  X------XX
-  X-----XXX
-  XXXXX---X
-  XXXXXXX-I
+  XXXXXXXXXX
+  XXXXXXXOXX
+  X-------XX
+  X-XXXXXXXX
+  X-XXXXXXXX
+  X-XXXXXXXX
+  X------XXX
+  X-----XXXX
+  XXXXX---IX
+  XXXXXXXXXX
 `);
 
 maps.push(`
+  XIXXXXXXXX
+  X-XXXXXXXX
+  X-------XX
+  X--XXXXXXX
+  X-XXXXXXXX
+  X--XXXXXXX
   XX-XXXXXXX
-  XI-XXXXXX
-  XX------X
-  X--XXXXXX
-  X-XXXXXXX
-  X--XXXXXX
-  XX-XXXXXX
-  XX--XXXXX
-  XX------X
-  XXXXXXX-O
+  XX--XXXXXX
+  XX------OX
+  XXXXXXXXXX
 `);
 
 

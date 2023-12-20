@@ -1,32 +1,80 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="./css/style.css">
-            <link rel="icon" href="./img/bomb-removebg-preview.png">
-            <title>game-Js</title>
-        </head>
-        <body>
-            <div class="game-container">
-            <canvas id="game"></canvas>
-            
-            <div class="btns">
-                <button id="up">Arriba</button>
-                <button id="left">Izquierda</button>
-                <button id="right">Derecha</button>
-                <button id="down">Abajo</button>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./img/bomb-removebg-preview.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Riesgo Equeletico</title>
+</head>
+<body>
+  <div id="contenedorPrincipal" class="w-full h-screen flex justify-center items-center bg-[#1c1f51]">
+        <div class="bg-white shadow-md shadow-white w-5/6 h-5/6 rounded-xl sm:grid grid-cols-2">
+            <div id="row-2" class="relative w-full h-full flex justify-center items-center overflow-hidden flex-col pt-4">
+                <img class="h-[400px] z-10" src="img/c064823d0b34bb766c2b61455afdf9dd-removebg-preview.png" alt="">
+               
+                <svg class="absolute w-[700px]  z-0" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#1c1f51c9" d="M18.7,-35.1C24.3,-29.1,28.8,-24.2,36.9,-18.5C45,-12.9,56.6,-6.4,59.5,1.7C62.5,9.8,56.8,19.7,52.2,31.4C47.6,43,44,56.5,35.5,66.8C27,77.1,13.5,84.3,4.4,76.7C-4.8,69.2,-9.6,47,-22,39C-34.5,31,-54.7,37.1,-64.8,33C-74.9,28.8,-74.8,14.4,-76.2,-0.8C-77.6,-16,-80.5,-32.1,-71.4,-37.8C-62.2,-43.5,-41,-38.9,-27.1,-40.1C-13.2,-41.3,-6.6,-48.3,0,-48.3C6.6,-48.3,13.1,-41.2,18.7,-35.1Z" transform="translate(100 100)"></path>
+                </svg>
+                
             </div>
-        
-            <div class="messages">
-                <div>
-                    <p>Vidas: <span id="lives"></span></p>
+            <div class="h-full w-full flex flex-col items-center justify-center rounded-md sm:rounded-none">
+               <div class="w-16 flex items-center justify-center sm:w-24">
+                   <img src="./img/Layer%20Lab.png" alt="">
                 </div>
+                <div class="container">
+                         <div class="text-4xl text-[#1c1f51]">
+                             Login
+                          </div>
+                          <form action="#">
+                             <div class="form-row">
+                                <div class="input-data">
+                                   <input type="text" required="">
+                                   <div class="underline"></div>
+                                   <label for="">Username</label>
+                                </div>
+                                <div class="input-data">
+                                   <input type="text" required="">
+                                   <div class="underline"></div>
+                                   <label for="">Password</label>
+                                </div>
+                             </div>
+                            <div class="form-row-2 submit-btn">
+                               <div class="input-data">
+                                  <div class="inner"></div>
+                                  <input id="click-button" type="submit" value="PLAY">
+                               </div>
+                            </div>
+                          </form>
+                    </div>
             </div>
-            </div>
-        
-            <script src="./js/map.js"></script>
-            <script src="./js/game.js"></script>
-        </body>
-    </html>
+        </div>
+  </div>
+  <div class="game-container hidden">
+    <canvas id="game"></canvas>
+    
+    <div class="btns">
+      <button class="btn" id="up">Arriba</button>
+      <button class="btn" id="left">Izquierda</button>
+      <button class="btn" id="right">Derecha</button>
+      <button class="btn" id="down">Abajo</button>
+    </div>
+
+    <div class="messages">
+      <p>Vidas: <span id="lives"></span></p>
+      <p>Tiempo: ⏰<span id="time"></span></p>
+      <p>Record: 🏁<span id="record"></span></p>
+      <p id="result"></p>
+    </div>
+  </div>
+
+  <script src="./js/map.js"></script>
+  <script src="./js/game.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
